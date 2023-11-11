@@ -9,7 +9,9 @@ public class OrderProcessor {
 
     public void process(Order order) {
         PgRepository pgRepo = new PgRepository();
+        OracleRepository oracleRepository = new OracleRepository();
         SendConfirmationEmail sendMail = new SendConfirmationEmail();
+        boolean isOracle = false;
 
         // Order processing Business logic
         System.out.println("Executing business rules and logic...");
@@ -17,7 +19,12 @@ public class OrderProcessor {
         order.setCustomerEmail("sandrolax@gmail.com");
         order.setId(47);
 
-        pgRepo.save(order);
+        if (isOracle) {
+            oracleRepository.save(order);
+        } else {
+            pgRepo.save(order);
+        }
+
 
         sendMail.sendConfirmationEmail(order);
     }

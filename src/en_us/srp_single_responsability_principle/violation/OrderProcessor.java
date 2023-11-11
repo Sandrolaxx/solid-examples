@@ -35,7 +35,7 @@ public class OrderProcessor {
         String name = order.getCustomerName();
         String email = order.getCustomerEmail();
 
-        String html = "Dear ".concat(name).concat(", yor Order ")
+        String html = "Dear ".concat(name).concat(", your Order ")
                 .concat(order.getId().toString()).concat(" is confirmed!😎");
 
         smtp.send(html, email);

@@ -58,4 +58,8 @@ public class Pedido {
         return id != null;
     }
 
+    public boolean possuiItens() {
+        return itens != null && !itens.isEmpty();
+    }
+
 }

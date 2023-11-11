@@ -1,7 +1,7 @@
 package src.pt_br.ocp_principio_aberto_fechado.solucao;
 
-import src.pt_br.ocp_principio_aberto_fechado.violacao.Pedido;
 import src.pt_br.srp_principio_responsabilidade_unica.solucao.ProcessaPedido;
+import src.pt_br.srp_principio_responsabilidade_unica.violacao.Pedido;
 
 /**
  * OCP SOLUÇÃO

@@ -14,7 +14,7 @@ public class ProcessaPedidoComAlteracaoRequerida extends ProcessaPedido {
             throw new RuntimeException("Não é possível continuar! Pedido sem itens.");
         }
         
-        this.processar(pedido);
+        super.processar(pedido);
 
         // Depois do processamento
         if (!pedido.isValid()) {
